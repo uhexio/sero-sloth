@@ -1,0 +1,8 @@
+.alert-input-group{
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.native-textarea{
+    font-size: 8px !important;
+}

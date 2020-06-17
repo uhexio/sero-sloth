@@ -1,0 +1,12 @@
+{
+  "account": "Account",
+  "currency": "Currency",
+  "balance": "Balance",
+  "send": "Send",
+  "selectOne": "Please select",
+  "tip1": "Please fill in the data to be sent in the format!",
+  "tip2": "Please select an account",
+  "tip3": "Please select currency",
+  "tip4": "Insufficient balance",
+  "tip5": "Send up to 100 at a time!"
+}
