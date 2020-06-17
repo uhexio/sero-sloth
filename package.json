@@ -2,6 +2,8 @@
   "name": "batch-transfer",
   "version": "0.0.1",
   "private": true,
+  "homepage": ".",
+  "main": ".",
   "dependencies": {
     "@babel/core": "7.9.0",
     "@ionic/react": "^5.0.7",
