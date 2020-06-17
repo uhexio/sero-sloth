@@ -155,10 +155,10 @@ class Service {
             const dapp = {
                 name: "SLOTH",
                 contractAddress: "SLOTH",
-                github: "https://github.com/uhexio/sloth",
+                github: "https://github.com/uhexio/sero-sloth",
                 author: "uhexio",
-                url: "//"+window.location.host,
-                logo: "//"+window.location.host+"/assets/icon/icon.png",
+                url: window.location.href,
+                logo: window.location.origin+window.location.pathname +"assets/icon/icon.png",
             }
 
             seropp.init(dapp,function (rest:any) {
