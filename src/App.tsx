@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import {
   IonApp,
 } from '@ionic/react';
@@ -27,9 +27,9 @@ import './theme/variables.css';
 
 const App: React.FC = () => (
   <IonApp>
-    <IonReactRouter>
+    <Router>
       <Route path="/" component={BatchTransfer} exact={true} />
-    </IonReactRouter>
+    </Router>
   </IonApp>
 );
 
