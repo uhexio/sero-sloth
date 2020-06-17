@@ -66,7 +66,7 @@ const abi=[
     }
 ]
 
-const contractAddress = "2gyAVV3HkTCS1ABHprcufEn7CeZZ93kYVsKKSqtWDtvzXDkgLujhgTrXeRKC8MyVu7egH25UsBUsjAFvr6Vy7ahR";
+const contractAddress = "7fYrqA86AwVHPGbDJjUk4EBBaFr4qJjSbd125i5WQ3eGh1ur55W9RpoarFXhhbtAX2fDf5Haogqz5D1A9oi6TwL";
 
 class Service {
 

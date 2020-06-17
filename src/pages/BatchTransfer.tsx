@@ -133,7 +133,6 @@ class BatchTransfer extends React.Component<State, any>{
             }
         }
         return ops
-
     }
 
     confirm = ()=>{
