@@ -8,5 +8,14 @@
   "tip2": "请选择账户",
   "tip3": "请选择币种",
   "tip4": "余额不足",
-  "tip5": "单次最多发送100条"
+  "tip5": "单次最多发送100条",
+
+  "selectAccount": "请选择账户",
+  "setData": "添加数据",
+  "inputAmount": "请输入金额",
+  "inputNumber": "请输入拆分的UTXO数量",
+  "slice": "每一份的金额",
+  "onekey": "一键拆分UTXO",
+  "batchTransfer": "批量转账"
+
 }

@@ -1,10 +1,18 @@
 import React from 'react';
-import { HashRouter as Router, Route } from 'react-router-dom';
 import {
-  IonApp,
+    IonApp,
+    IonIcon,
+    IonLabel,
+    IonRouterOutlet,
+    IonTabBar,
+    IonTabButton,
+    IonBadge,
+    IonTabs
 } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
+import {Redirect, Route, Switch} from 'react-router-dom';
+import { IonReactHashRouter } from '@ionic/react-router';
 import BatchTransfer from './pages/BatchTransfer';
+import { rocketOutline,colorWandOutline} from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -24,12 +32,33 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import i18n from './i18n';
+import OneKey from "./pages/OneKey";
 
 const App: React.FC = () => (
   <IonApp>
-    <Router>
-      <Route path="/" component={BatchTransfer} exact={true} />
-    </Router>
+      <IonReactHashRouter>
+          <IonTabs>
+              <IonRouterOutlet animated={true}>
+                  {/*<Switch>*/}
+                  <Route path="/batchTransfer" component={BatchTransfer}  exact={true} />
+                  <Route path="/onekey" component={OneKey}  exact={true} />
+                  <Route path="/" render={() => <Redirect to="/batchTransfer" />} exact={true} />
+                  {/*</Switch>*/}
+              </IonRouterOutlet>
+              <IonTabBar slot="bottom">
+                  <IonTabButton tab="batchTransfer" href="/batchTransfer">
+                      <IonIcon icon={rocketOutline} />
+                      <IonLabel>{i18n.t("batchTransfer")}</IonLabel>
+                  </IonTabButton>
+                  <IonTabButton tab="onekey" href="/onekey">
+                      <IonIcon icon={colorWandOutline} />
+                      <IonLabel>{i18n.t("onekey")}</IonLabel>
+                  </IonTabButton>
+
+              </IonTabBar>
+          </IonTabs>
+      </IonReactHashRouter>
   </IonApp>
 );
 

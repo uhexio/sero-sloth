@@ -8,5 +8,12 @@
   "tip2": "계정을 선택하십시오",
   "tip3": "통화를 선택하십시오",
   "tip4": "불충분 한 잔액",
-  "tip5": "한 번에 최대 100 개를 보내십시오!"
+  "tip5": "한 번에 최대 100 개를 보내십시오!",
+  "selectAccount": "계정을 선택하십시오",
+  "setData": "데이터 추가",
+  "inputAmount": "금액을 입력하십시오",
+  "inputNumber": "분할 UTXO 수를 입력하십시오",
+  "slice": "사본 당 수량",
+  "onekey": "하나의 키 분할 UTXO",
+  "batchTransfer": "배치 전송"
 }

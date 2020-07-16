@@ -1,5 +1,22 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle,IonSelectOption, IonToolbar,IonList,IonLabel,IonSelect,IonItem,IonTextarea,IonText ,IonButton,IonToast,IonAlert} from '@ionic/react';
+import {
+    IonContent,
+    IonHeader,
+    IonPage,
+    IonTitle,
+    IonSelectOption,
+    IonToolbar,
+    IonList,
+    IonLabel,
+    IonSelect,
+    IonItem,
+    IonTextarea,
+    IonText,
+    IonButton,
+    IonToast,
+    IonAlert,
+    IonItemDivider
+} from '@ionic/react';
 import service from "../common/service";
 import i18n from "../i18n";
 import utils from "../common/utils";
@@ -236,14 +253,7 @@ class BatchTransfer extends React.Component<State, any>{
             <IonPage>
                 <IonContent>
                     <IonList>
-                        <IonItem>
-                            <IonTextarea value={text}
-                                         autofocus
-                                         clearOnEdit
-                                         rows={10}
-                                         placeholder={`address,amount\naddress,amount\naddress,amount\naddress,amount`}
-                                         onIonChange={e => this.setText(e.detail.value!)}/>
-                        </IonItem>
+                        <IonItemDivider mode="ios">{i18n.t("selectAccount")}</IonItemDivider>
                         <IonItem>
                             <IonLabel>{i18n.t('account')}</IonLabel>
                             <IonSelect value={selectAccount.PK} placeholder={i18n.t('selectOne')} onIonChange={e => this.setAccount(e.detail.value)}>
@@ -256,17 +266,28 @@ class BatchTransfer extends React.Component<State, any>{
                                 {balancesOptions}
                             </IonSelect>
                         </IonItem>
-                        <IonItem>
+                        <IonItem lines="none">
                             <IonLabel>{i18n.t('balance')}</IonLabel>
                             <IonText>
                                 {balance}
                             </IonText>
                         </IonItem>
+
+                        <IonItemDivider mode="ios">{i18n.t("setData")}</IonItemDivider>
+                        <IonItem lines="none">
+                            <IonTextarea value={text}
+                                         autofocus
+                                         clearOnEdit
+                                         rows={12}
+                                         placeholder={`address,amount\naddress,amount\naddress,amount\naddress,amount`}
+                                         onIonChange={e => this.setText(e.detail.value!)}/>
+                        </IonItem>
+
                     </IonList>
 
-                    <div style={{width:"100%",position:"fixed",bottom:0}}>
-                        <IonButton onClick={this.confirm} expand={"block"}>{i18n.t('send')}</IonButton>
-                    </div>
+                    <p>
+                        <IonButton onClick={this.confirm} expand={"block"} mode="ios" fill="outline">{i18n.t('send')}</IonButton>
+                    </p>
 
                     <IonToast
                         onDidDismiss={this.hideToast}

@@ -8,5 +8,13 @@
   "tip2": "Please select an account",
   "tip3": "Please select currency",
   "tip4": "Insufficient balance",
-  "tip5": "Send up to 100 at a time!"
+  "tip5": "Send up to 100 at a time!",
+
+  "selectAccount": "Please select an account",
+  "setData": "Add Data",
+  "inputAmount": "Please enter the amount",
+  "inputNumber": "Please enter the number of split UTXO",
+  "slice": "Amount per copy",
+  "onekey": "One-key split UTXO",
+  "batchTransfer": "Batch Transfer"
 }
