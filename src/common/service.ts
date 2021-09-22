@@ -108,7 +108,7 @@ class Service {
             let executeData = {
                 from: tx.from,
                 value: "0x" + tx.value.toString(16),
-                gasPrice: '0x' + new BigNumber('1000000000').toString(16),
+                gasPrice: '0x' + new BigNumber('1000000001').toString(16),
                 cy: "SERO",
                 gas:'0x' + new BigNumber('25000').toString(16),
                 BuyShare: {
@@ -234,7 +234,7 @@ class Service {
             to: this.contract.address,
             value: "0x" + value.toString(16),
             data: packData,
-            gasPrice: "0x" + new BigNumber("1000000000").toString(16),
+            gasPrice: "0x" + new BigNumber("1000000001").toString(16),
             cy: cy,
         };
         let estimateParam:any = {
@@ -242,7 +242,7 @@ class Service {
             to: this.contract.address,
             value: "0x" + value.toString(16),
             data: packData,
-            gasPrice: "0x" + new BigNumber("1000000000").toString(16),
+            gasPrice: "0x" + new BigNumber("1000000001").toString(16),
             cy: cy,
         };
 
