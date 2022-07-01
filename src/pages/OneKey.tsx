@@ -80,15 +80,23 @@ class Onekey extends React.Component<State, any>{
         if(balances instanceof Map){
             // @ts-ignore
             for(let [k,v] of balances){
-                const decimal = await service.getDecimal(k);
-                balanceMap.set(k,utils.fromValue(v,decimal).toString(10))
+                try{
+                    const decimal = await service.getDecimal(k);
+                    balanceMap.set(k,utils.fromValue(v,decimal).toString(10))
+                }catch (e){
+                    console.error(e);
+                }
             }
         }else {
             let keys = Object.keys(balances);
             for(let k of keys){
-                const v = balances[k];
-                const decimal = await service.getDecimal(k);
-                balanceMap.set(k,utils.fromValue(v,decimal).toString(10))
+                try{
+                    const v = balances[k];
+                    const decimal = await service.getDecimal(k);
+                    balanceMap.set(k,utils.fromValue(v,decimal).toString(10))
+                }catch (e){
+                    console.error(e)
+                }
             }
         }
 
